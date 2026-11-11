@@ -1,0 +1,9 @@
+[
+  {
+    "channel": "My text service",
+    "endpoint": "https://api.example.invalid/v1",
+    "services": {
+      "llm": { "adapter": "chat-completions", "models": ["your-model-id"] }
+    }
+  }
+]
