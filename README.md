@@ -1,6 +1,10 @@
-# Workflow Studio — 开源准备工作区
+# Workflow Studio
 
-**当前为私有技术审查版本，尚未正式开源。** 许可证与 PostgreSQL 部署验收尚待完成。按拥有者决定，本次交付不进行真实付费 API 测试。不要上传或公开整个准备目录。
+本项目由个人旧网站源码整理而来，出于兴趣分享，供学习、交流和自行改造使用，采用 [MIT 许可证](LICENSE)。允许修改、分发、出售及自行收费运营，无需向原作者分成；使用者须保留版权与许可声明。
+
+项目按现状提供，不保证功能完整、可运行性、安全性或适合任何特定用途，不承诺持续维护、技术支持或问题修复。第三方部署、服务费用及运营由使用者自行安排，不代表原作者提供服务或背书。具体授权与免责条款以 LICENSE 为准。
+
+MIT 授权适用于本项目有权许可的原创代码；第三方依赖、字体等保留各自许可，见 [第三方许可说明](THIRD_PARTY_NOTICES.md)。本许可不授予冒用原作者身份或声称获得其背书的权利。
 
 ## 本地预览
 
@@ -36,16 +40,12 @@ node scripts/check-protected-routes.mjs
 
 请按 [使用者上手指南](docs/getting-started.md) 完成本地启动、管理员登录和自有渠道配置。正式运营另见 [部署说明](docs/deployment.md)。
 
-## 发布前待办
+## 发布与验证范围
 
-- PostgreSQL 迁移与 API/Worker 多进程部署验收。
-- 由拥有者选择代码许可证，并审阅最终发布文件。
-- 当前仅上传独立私有仓库；未经最终确认不公开。
-
-真实付费 API 测试不在本次交付范围内。使用者应自行验证所接供应商与适配器的兼容性。
+本仓库提供源码，不承诺交付可直接运营的成品。PostgreSQL 多进程部署和真实付费 API 测试不在本次发布验收范围内；使用者应自行验证部署环境与所接服务。
 
 ## 当前验证限制
 
-当前迁移后的完整测试套件为 255 项通过。初始副本的 305 项与当前套件不同，供应商协议实现的测试不计入当前通用契约覆盖。新增渠道边界测试可运行 `node --test server/src/services/configured-provider.test.js`。完整发布阻断项见 `docs/project-status.md`。
+当前迁移后的完整测试套件为 255 项通过。初始副本的 305 项与当前套件不同，供应商协议实现的测试不计入当前通用契约覆盖。新增渠道边界测试可运行 `node --test server/src/services/configured-provider.test.js`。验证记录见 `docs/project-status.md`。
 
-安装与部署限制见 `docs/deployment.md`，锁定依赖许可标识见 `docs/dependency-licenses.json`。本项目许可证暂未确定。
+安装与部署限制见 `docs/deployment.md`，锁定依赖许可标识见 `docs/dependency-licenses.json`。本项目采用 MIT 许可证。
